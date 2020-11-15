@@ -1,8 +1,22 @@
+:root {
+  --color-header-bg: #fafafa;
+  --color-container-border: #eaeded;
+  --color-divider: #aab7b8;
+  --color-header-text: #545b64;
+  --color-text: #16191f;
+  --color-shadow: rgba(0,28,36,.3);
+  --color-primary: #1f75fe;
+}
+
+html {
+  font-size: 0.625rem;
+  color: var(--color-text);
+}
+
 body {
+  font-size: 1.4rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +24,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100vh;
+}
+
+/* Material UI */
+
+.textfield-input {
+  font-size: 1.4rem !important;
+  height: 1.4rem !important;
+}
+
+.tablecell-body {
+  font-size: 1.2rem !important;
 }

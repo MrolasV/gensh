@@ -1,0 +1,175 @@
+.builds-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.rail-container {
+  height: 100%;
+  width: 25rem;
+  border-right: 1px solid var(--color-divider);
+  position: relative;
+}
+
+.rail-options {
+  height: calc(100% - 3rem);
+  overflow: hidden auto;
+}
+
+.rail-option-container {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid var(--color-container-border);
+  cursor: pointer;
+  display: flex;
+  user-select: none;
+
+  .rail-option-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    flex: 0 0 3rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .rail-option-label {
+    line-height: 2rem;
+    padding: 1.1rem 0 0.9rem 0.5rem;
+    white-space: nowrap;
+  }
+}
+.rail-option-container:hover {
+  background-color: var(--color-header-bg);
+}
+
+.rail-option-selected {
+  background-color: var(--color-header-bg);
+  font-weight: 700;
+}
+
+.rail-add-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid var(--color-container-border);
+  z-index: 1;
+  height: 3rem;
+  font-weight: 700;
+  display: flex;
+
+  .rail-add-button-icon {
+    display: block;
+    margin: auto;
+  }
+}
+.rail-add-button:hover {
+  background-color: var(--color-header-bg);
+}
+
+.editor-container {
+  flex: 1;
+}
+
+.editor-meta-panel {
+  width: 100%;
+  height: 6rem;
+  border-bottom: 1px solid var(--color-container-border);
+  display: flex;
+
+  .editor-meta-panel-label {
+    padding-left: 1rem;
+    padding-top: 1.3rem;
+
+    .editor-meta-panel-label-field {
+      width: 25rem;
+    }
+  }
+
+  .editor-meta-panel-action {
+    padding-left: 1rem;
+    padding-top: 1.3rem;
+
+    .editor-meta-panel-action-button {
+      height: 3.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.editor-data-panel {
+  display: flex;
+  height: calc(100% - 6.1rem);
+}
+
+.editor-left-panel {
+  width: 24rem;
+  border-right: 1px solid var(--color-container-border);
+}
+
+.editor-character-panel {
+  .character-input {
+    display: flex;
+
+    .select-container {
+      padding-top: 1rem;
+      padding-left: 1rem;
+
+      .select-icon {
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    .character-right {
+      flex: 1;
+      padding-top: 1rem;
+      padding-left: 1rem;
+
+      .character-name {
+        font-weight: 700;
+        font-size: 1.6rem;
+      }
+
+      .character-ascension-container {
+        display: flex;
+        padding-top: 0.5rem;
+
+        .character-ascension-star {
+          cursor: pointer;
+        }
+
+        .character-ascension-star:not(:first-child) {
+          padding-left: 0.2rem;
+        }
+      }
+
+      .character-level-container {
+        padding-top: 0.5rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .character-stats-container {
+    padding-top: 1rem;
+
+    .character-stats-header {
+      padding-left: 1rem;
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.editor-weapon-panel {
+
+}
+
+.editor-artifact-panel {
+  flex: 1;
+}

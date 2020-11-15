@@ -1,20 +1,19 @@
 import React from 'react';
-import { withRouter, RouteComponentProps } from 'react-router';
+import { Switch, Route, Redirect } from 'react-router';
+import { Page } from './page';
+import './main.scss';
+import BuildView from 'modules/builds/buildsView';
 
-type MainProps = RouteComponentProps;
-
-class Main extends React.Component<MainProps,{}> {
-  constructor (props: MainProps) {
-    super(props);
-  }
-
+class Main extends React.Component<{},{}> {
   render () {
-    console.log(this.props.location);
-    return <>
-      <div>{`Hello! Am Main`}</div>
-      <div>{`You are at ${this.props.location.pathname}`}</div>
-    </>
+    return <main className="main-container">
+      <Switch>
+        <Route path={Page.home} exact={true} component={BuildView} />
+        <Route path={Page.build} component={BuildView} />
+        <Redirect to={Page.home} />
+      </Switch>
+    </main>
   }
 }
 
-export default withRouter(Main);
+export default Main;
